@@ -3,10 +3,10 @@ pipeline {
   stages {
     stage ('Test') {
       when {
-                expression { env == 'Test'}
+                expression { env == 'None'}
             }
             steps {
-                echo "Hello, Test1"
+                echo "Hello, Test"
             }
     }
     stage ('UAT') {
