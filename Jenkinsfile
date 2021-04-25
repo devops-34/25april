@@ -1,16 +1,3 @@
-SKIPPED STAGES IN JENKINS SCRIPTED PIPELINE
-
-
-To show all stages at every build even if not executed is a 
-good practice and brings transparency into pipelines 
-with conditional steps or stages. Add the when condition 
-to a stage of your pipeline:
-
-
-
-
-
-
 pipeline {
     agent any 
   stages {
