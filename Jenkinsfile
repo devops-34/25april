@@ -3,26 +3,26 @@ pipeline {
   stages {
     stage ('Test') {
       when {
-                expression { env == 'None'}
+                expression { return.env == 'Test'}
             }
             steps {
-                echo "Hello, Test"
+              sh  echo "Hello, Test"
             }
     }
     stage ('UAT') {
       when {
-                expression { env == 'UAT'}
+                expression { return.env == 'UAT'}
             }
             steps {
-                echo "Hello, UAT"
+               sh  echo "Hello, UAT"
             }
     }
    stage ('Demo') {
       when {
-                expression { env == 'Demo'}
+                expression { return.env == 'Demo'}
             }
             steps {
-                echo "Hello, Demo"
+             sh   echo "Hello, Demo"
             }
         }
   }
