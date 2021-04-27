@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage ('Test') {
       when {
-                expression { return.env == 'Test'}
+                expression { params.env == 'Test'}
             }
             steps {
               sh  echo "Hello, Test"
@@ -11,7 +11,7 @@ pipeline {
     }
     stage ('UAT') {
       when {
-                expression { return.env == 'UAT'}
+                expression { params.env == 'UAT'}
             }
             steps {
                sh  echo "Hello, UAT"
@@ -19,7 +19,7 @@ pipeline {
     }
    stage ('Demo') {
       when {
-                expression { return.env == 'Demo'}
+                expression { params.env == 'Demo'}
             }
             steps {
              sh   echo "Hello, Demo"
